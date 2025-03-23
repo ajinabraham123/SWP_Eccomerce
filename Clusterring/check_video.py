@@ -77,9 +77,7 @@ def classify_frame_with_api(frame):
             os.remove(temp_image_path)
 
 def analyze_video(uploaded_video):
-    """
-    Analyze the uploaded video for NSFW content using Sightengine API.
-    """
+    
     with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as temp_video:
         temp_video.write(uploaded_video.read())
         video_path = temp_video.name
